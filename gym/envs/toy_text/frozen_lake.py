@@ -27,6 +27,12 @@ MAPS = {
         "FHFFHFHF",
         "FFFHFFFG"
     ],
+    "4x4NoHole": [
+        "SFFF",
+        "FFFF",
+        "FFFF",
+        "FFFG"
+    ]
 }
 
 class FrozenLakeEnv(discrete.DiscreteEnv):
@@ -76,7 +82,7 @@ class FrozenLakeEnv(discrete.DiscreteEnv):
 
         def to_s(row, col):
             return row*ncol + col
-        
+
         def inc(row, col, a):
             if a==0: # left
                 col = max(col-1,0)
